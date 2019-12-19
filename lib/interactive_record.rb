@@ -40,7 +40,6 @@ class InteractiveRecord
     values.join(", ")
   end
   sql = "INSERT INTO students (name,grade) VALUES (?,?)"
-  DB[:conn].execute(sl, self.name, self.grade)
  def save
   sql = "INSERT INTO #{table_name_for_insert} (#{col_names_for_insert}) VALUES (#{values_for_insert})"
   DB[:conn].execute(sql)
